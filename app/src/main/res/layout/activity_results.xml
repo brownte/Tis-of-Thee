@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvFlagResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="🇦🇩"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLanguageResult" />
+
+    <TextView
+        android:id="@+id/tvLanguageResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="Catalan"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvFlagResult"
+        app:layout_constraintTop_toBottomOf="@+id/tvCurrencyResult" />
+
+    <TextView
+        android:id="@+id/tvCurrencyResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="EUR"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvLanguageResult"
+        app:layout_constraintTop_toBottomOf="@+id/tvCapitalResult" />
+
+    <TextView
+        android:id="@+id/tvCapitalResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="Andorra la Vella"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvCurrencyResult"
+        app:layout_constraintTop_toBottomOf="@+id/tvContinentResult" />
+
+    <TextView
+        android:id="@+id/tvContinentResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="Europe"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvCapitalResult"
+        app:layout_constraintTop_toBottomOf="@+id/tvPhoneResult" />
+
+    <TextView
+        android:id="@+id/tvPhoneResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="376"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvContinentResult"
+        app:layout_constraintTop_toBottomOf="@+id/tvNativeResult" />
+
+    <TextView
+        android:id="@+id/tvNativeResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="36dp"
+        android:text="Andorra"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvPhoneResult"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvNameResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="Andorra"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvNativeResult"
+
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvNameResult" />
+
+    <TextView
+        android:id="@+id/tvNative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Native:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/tvName"
+        app:layout_constraintTop_toTopOf="@+id/tvNativeResult" />
+
+    <TextView
+        android:id="@+id/tvPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/tvNative"
+        app:layout_constraintTop_toTopOf="@+id/tvPhoneResult" />
+
+    <TextView
+        android:id="@+id/tvContinent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continent:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/tvPhone"
+        app:layout_constraintTop_toTopOf="@+id/tvContinentResult" />
+
+    <TextView
+        android:id="@+id/tvCapital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Capital:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/tvContinent"
+        app:layout_constraintTop_toTopOf="@+id/tvCapitalResult" />
+
+    <TextView
+        android:id="@+id/tvCurrency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Currency:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/tvCapital"
+        app:layout_constraintTop_toTopOf="@+id/tvCurrencyResult" />
+
+    <TextView
+        android:id="@+id/tvLanguage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Languages:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/tvCurrency"
+        app:layout_constraintTop_toBottomOf="@+id/tvCurrency" />
+
+    <TextView
+        android:id="@+id/tvFlag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Flag:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/tvLanguage"
+        app:layout_constraintTop_toBottomOf="@+id/tvLanguage" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_nav_menu_resultsready"
+        tools:layout_editor_absoluteX="15dp">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

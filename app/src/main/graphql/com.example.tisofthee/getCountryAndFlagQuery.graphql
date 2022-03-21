@@ -1,0 +1,7 @@
+query getCountryAndFlagQuery {
+    countries {
+        emoji
+        name
+        code
+    }
+}
