@@ -12,8 +12,11 @@ import com.apollographql.apollo3.ApolloClient
 import com.apollographql.apollo3.exception.ApolloException
 import com.example.tisofthee.GetCountryAndFlagQuery
 import com.example.tisofthee.databinding.FragmentMainBinding
+import com.example.tisofthee.Apollo
 
-class MainCountryFlagCodeFragment() : Fragment(){
+class MainCountryFlagCodeFragment(val apolloClient : ApolloClient,
+                                  val countrySelectionListener: CountrySelectionListener) : Fragment() {
+
     private lateinit var binding: FragmentMainBinding
 
 
@@ -25,11 +28,6 @@ class MainCountryFlagCodeFragment() : Fragment(){
         binding = FragmentMainBinding.inflate(inflater, container, false)
         return binding.root
     }
-
-    private val apolloClient = ApolloClient.Builder()
-        .serverUrl("https://countries.trevorblades.com/graphql")
-        .build()
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,7 +54,7 @@ class MainCountryFlagCodeFragment() : Fragment(){
             val countries = response?.data?.countries
 
             if (countries != null && !response.hasErrors()) {
-                val adapter = MainCountryFlagCodeAdapter(countries)
+                val adapter = MainCountryFlagCodeAdapter(countries, countrySelectionListener)
                 binding.recyclerViewCountryList.layoutManager = LinearLayoutManager(requireContext())
                 binding.recyclerViewCountryList.adapter = adapter
 

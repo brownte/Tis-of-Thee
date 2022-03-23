@@ -15,7 +15,6 @@ class MainCountryFlagCodePresenter(view: MainContract.View) : MainContract.Prese
     }
 
     override fun getResults() {
-        TODO("Not yet implemented")
 
     }
 

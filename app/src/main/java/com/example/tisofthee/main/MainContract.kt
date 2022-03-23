@@ -7,9 +7,15 @@ interface MainContract {
         fun attachView(view: View)
         fun onViewCreated()
         fun getResults()
+
     }
 
     interface View : BaseView<Presenter> {
-        fun loadCountries()
+
+        fun getCountryCode()
+    }
+
+    interface CallbackInterface {
+        fun setCountryCode(message : String)
     }
 }
