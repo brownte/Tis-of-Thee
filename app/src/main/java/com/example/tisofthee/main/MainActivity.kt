@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity(), CountrySelectionListener {
         return selectedChipsList
     }
 
-    fun requestCountryResults(selectedChips : MutableList<String>) {
+    private fun requestCountryResults(selectedChips : MutableList<String>) {
         lifecycleScope.launchWhenResumed {
             val response = try {
                 apolloClient.query(GetResultsQuery(selectedCountryCode)).execute()
